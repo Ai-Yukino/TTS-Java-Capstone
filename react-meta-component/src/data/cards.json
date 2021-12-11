@@ -1,0 +1,6 @@
+{
+    "suit": "clubs",
+    "face" : "ace",
+    "value": [1, 11],
+	"image": "./assets/favicon.svg"
+}

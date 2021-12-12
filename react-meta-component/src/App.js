@@ -8,12 +8,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="cards">
-        This card is a(n) <img src={cards.image}></img>.
+      <div className="deck">
+        This card is a(n) <img src={deck.card.image}></img>.
       </div>
       <button onClick={() => setCardState("King")}></button>
-    </div>
+c    </div>
   );
 }
 
-export default App;
+export default App;  

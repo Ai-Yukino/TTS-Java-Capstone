@@ -1,10 +1,10 @@
 Putting down certain things I things that may be helpful
 
-##dealing cards:
+## dealing cards:
     int dealerAceCount = 0;
     int aceCount = 0;
 
-randomly draw two cards and give to dealer (ensure that duplicates can't occur)
+    //randomly draw two cards and give to dealer (ensure that duplicates can't occur)
 
     for(cards in dealerHand) {
         if(card = Ace) {
@@ -21,7 +21,7 @@ do same for player
     }
 
 ### Actual Game
-####Player
+#### Player
     int sum = 0;
     boolean stillPlaying = true;
     boolean gameOver = false;
@@ -59,7 +59,7 @@ do same for player
                 break;
                 //Game over Loss
             }
-###Dealer
+### Dealer
 
     if(!gameOver) {
         for(cards in hand) {

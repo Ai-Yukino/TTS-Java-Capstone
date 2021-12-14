@@ -1,0 +1,11 @@
+{
+  "card": [
+    {
+      "suit": ["clubs", "diamonds", "hearts", "spades"],
+      "face": ["ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king"],
+      "value": [1, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "image": "./assets/favicon.svg"
+    }
+  ]
+}
+  

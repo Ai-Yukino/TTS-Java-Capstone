@@ -5,7 +5,7 @@
       "suit": "hearts",
       "face": "ace",
       "value": [1, 11],
-      "image": "./assets/favicon.svg"
+      "image": "./assets/Cards/3H"
     }
   ]
 }

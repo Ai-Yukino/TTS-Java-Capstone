@@ -1,10 +1,25 @@
 Putting down certain things I things that may be helpful
 
-## dealing cards:
+### Generating Random deck
+
+    List<Integer> deckID = new ArrayList<>();
+    for (int i = 1; i <= 52; i++) {
+        deckID.add(i);
+    }
+    Collections.shuffle(solution);
+
+### dealing cards:
     int dealerAceCount = 0;
     int aceCount = 0;
+    int currIndex = 0;
 
-    //randomly draw two cards and give to dealer (ensure that duplicates can't occur)
+    //Not exactly sure how to implement, but this is the idea
+    give deckID[currIndex] == card.id to dealer
+    currIndex += 1;
+    give deckID[currIndex] == card.id to dealer
+    currIndex += 1;
+    give deckID[currIndex] == card.id to player
+    etc.
 
     for(cards in dealerHand) {
         if(card = Ace) {
@@ -27,6 +42,8 @@ do same for player
     boolean gameOver = false;
 
     for(cards in hand) {
+        give deckID[currIndex] == card.id to player
+        currIndex += 1;
         sum += card.value
         // I want Aces to default to 11
     }
@@ -49,7 +66,7 @@ do same for player
                         Ace.value = 1;
                         Ace.name = One;
                         //In the event there are two+ Aces, need some way to make sure code works as intended
-                        aceCount -= 0;
+                        aceCount -= 1;
                     }
                 }
             If(sum > 21 && aceCount = 0) {
@@ -59,7 +76,7 @@ do same for player
                 break;
                 //Game over Loss
             }
-### Dealer
+#### Dealer
 
     if(!gameOver) {
         for(cards in hand) {

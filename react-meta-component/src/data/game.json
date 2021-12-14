@@ -1,0 +1,12 @@
+{
+    "cards": [
+      {
+        "id": 0,
+        "suit": "hearts",
+        "face": "ace",
+        "value": [1, 11],
+        "image": "./assets/favicon.svg"
+      }
+    ]
+}
+    

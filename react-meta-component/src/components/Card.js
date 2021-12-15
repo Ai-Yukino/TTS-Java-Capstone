@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import "./App.css";
 import { useState } from "react";
 
-function App() {
+export default function Card() {
   const [gameState, setGameState] = useState({});
 
   useEffect(() => {
@@ -28,5 +27,3 @@ function App() {
 
   return <div className="App">{displayCard()}</div>;
 }
-
-export default App;

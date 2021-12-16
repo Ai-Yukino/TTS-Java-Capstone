@@ -1,0 +1,50 @@
+
+The story of the cards
+
+blackJackPossible?
+  OfferInsurance
+     BuyInsurance
+       BlackJackIsChecked
+       NormalBetting
+
+     Don'tBuyInsurance
+       NormalBetting
+
+
+
+state: "prebet"
+  Options: [PreGameBetting]
+  Transitions: [Dealing-1st]
+
+state: "Dealing-1st"
+  RunList:  //functions to be run
+  Options: []
+  Transitions: [Insurance?]
+
+state: "Insurance?"
+  RunList: [DealerHasBlackjack?]
+  Options: []
+  Transitions: [InsuranceRound, NormalBetting]
+
+state: "InsuranceRound"
+  RunList: []
+  Options: [BuyInsurance]
+  Transitions: [DealerBlackJackCheck, NormalBetting]
+
+state: "DealerBlackJackCheck"
+  RunList: [checkForDealerBlackJack]
+  Options: []
+  Transitions: [NormalBetting, GameOver]
+
+
+state: "NormalBetting"
+  RunList: []
+  Options: [DoubleDown, Hit, Stand]
+  Transitions: [DealersTurn]
+
+state: "DealersTurn"
+  RunList: [DealerHitOrStand]
+  Options: []
+  Transitions: []
+
+  

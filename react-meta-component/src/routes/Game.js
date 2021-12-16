@@ -30,6 +30,7 @@ export default function Game() {
       <div className={"flex" + " " + "space-around"}>
         <Card shuffledDeck={shuffledDeck} index={123} />
         <Card shuffledDeck={shuffledDeck} index={99} />
+        <Card shuffledDeck={shuffledDeck} index={156} />
         <Card shuffledDeck={shuffledDeck} index={43} />
         <Card shuffledDeck={shuffledDeck} index={9} />
       </div>

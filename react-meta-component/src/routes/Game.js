@@ -1,10 +1,5 @@
-import Card from "../components/Card";
+import Card from "../components/small/Card";
 
 export default function game() {
-  return (
-    <div>
-      Game display:
-      <Card />
-    </div>
-  );
+  return <div>Game display:</div>;
 }

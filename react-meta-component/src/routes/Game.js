@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
 import Card from "../components/small/Card";
+import "../index.css";
 
 export default function Game() {
   // 📝 Initialize state so VSCode doesn't cry
-  const [shuffledDeck, setShuffledDeck] = useState([]);
+  const [shuffledDeck, setShuffledDeck] = useState([
+    {
+      id: -1,
+      Suit: "",
+      Rank: "",
+      BlackjackValue: -1,
+      Image: { src: "", alt: "" },
+    },
+  ]);
 
   useEffect(() => {
     async function fetchData(url) {
@@ -11,17 +20,19 @@ export default function Game() {
       const data = await response.json();
       setShuffledDeck(data);
     }
-    console.log(shuffledDeck);
     fetchData("Data/Testing/shuffledDeck.json");
     console.log(shuffledDeck);
   }, []);
 
-  const baseUrl = "Images/";
-
   return (
-    <Card
-      src={baseUrl + shuffledDeck[99].Image.src}
-      alt={baseUrl + shuffledDeck[99].Image.alt}
-    />
+    <div>
+      <div>Number of cards: {shuffledDeck.length}</div>
+      <div className={"flex" + " " + "space-around"}>
+        <Card shuffledDeck={shuffledDeck} index={123} />
+        <Card shuffledDeck={shuffledDeck} index={99} />
+        <Card shuffledDeck={shuffledDeck} index={43} />
+        <Card shuffledDeck={shuffledDeck} index={9} />
+      </div>
+    </div>
   );
 }

@@ -8,7 +8,26 @@ export default function Card() {
     fetch("data/game.json")
       .then((res) => res.json())
       .then((data) => setGameState(data));
-  });
+  }, []);
+
+  // useEffect(() => {
+  //   async function fetchData(url) {
+  //     const response = await fetch(url);
+
+  //   }
+  // })
+
+  // useEffect(() => {
+  //   async function fetchData(url) {
+  //     const response = await fetch(url);
+  //     const data = await response.json();
+  //     setProductsData(data);
+  //   }
+
+  //   fetchData("./src/data/products.json");
+  //   // console.log(typeof products[2].name);
+  // }, []);
+  // // console.log(typeof products[2].name);
 
   const showCard = () => {
     return (

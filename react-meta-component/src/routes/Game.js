@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import Card from "../components/small/Card";
-import "../index.css";
+import "../css/atomic.css";
 
 export default function Game() {
   // 📝 Initialize state so VSCode doesn't cry
@@ -21,19 +21,44 @@ export default function Game() {
       setShuffledDeck(data);
     }
     fetchData("Data/Testing/shuffledDeck.json");
-    console.log(shuffledDeck);
   }, []);
 
-  return (
-    <div>
-      <div>Number of cards: {shuffledDeck.length}</div>
-      <div className={"flex" + " " + "space-around"}>
-        <Card shuffledDeck={shuffledDeck} index={123} />
-        <Card shuffledDeck={shuffledDeck} index={99} />
-        <Card shuffledDeck={shuffledDeck} index={156} />
-        <Card shuffledDeck={shuffledDeck} index={43} />
-        <Card shuffledDeck={shuffledDeck} index={9} />
+  console.log(shuffledDeck);
+
+  const baseUrl = "Images/";
+
+  if (shuffledDeck.length != 1) {
+    return (
+      <div>
+        <div>Number of cards: {shuffledDeck.length}</div>
+        <div className={"flex"}>
+          <Card deck={shuffledDeck} index={123} />
+          <Card deck={shuffledDeck} index={99} />
+          <Card deck={shuffledDeck} index={156} />
+          <Card deck={shuffledDeck} index={43} />
+          <Card deck={shuffledDeck} index={9} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div
+        className={
+          "bgColor-red" +
+          " " +
+          "height-100vh" +
+          " " +
+          "width-100vw" +
+          " " +
+          "flex" +
+          " " +
+          "font-size" +
+          " " +
+          "center"
+        }
+      >
+        👀
+      </div>
+    );
+  }
 }

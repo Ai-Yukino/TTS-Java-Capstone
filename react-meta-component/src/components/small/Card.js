@@ -1,27 +1,16 @@
-// import cardFunction from "../returnsFunction/cardFunction";
-
-export default function Card({ shuffledDeck, index }) {
+export default function Card({ deck, index }) {
   const baseUrl = "Images/";
 
-  return <div>{checkDeck(shuffledDeck, index)()}</div>;
-
-  // 📝 Checks if deck has been loaded before rendering
-  function checkDeck(deck, index) {
-    if (deck[index] != undefined) {
-      return () => {
-        return (
-          <img
-            src={baseUrl + deck[index].Image.src}
-            alt={baseUrl + deck[index].Image.alt}
-          />
-        );
-      };
-    } else {
-      return () => {
-        return (
-          <img src={baseUrl + "tux.svg"} alt={baseUrl + "Card not found"} />
-        );
-      };
-    }
+  if (deck[index] != undefined) {
+    return (
+      <img src={baseUrl + deck[index].Image.src} alt={deck[index].Image.alt} />
+    );
+  } else {
+    return (
+      <img
+        src={baseUrl + "tux.svg"}
+        alt={baseUrl + "Card not found; Tux says hi"}
+      />
+    );
   }
 }

@@ -7,10 +7,7 @@ export default function Card({ deck, index }) {
     );
   } else {
     return (
-      <img
-        src={baseUrl + "tux.svg"}
-        alt={baseUrl + "Card not found; Tux says hi"}
-      />
+      <img src={baseUrl + "tux.svg"} alt={"Card not found; Tux says hi"} />
     );
   }
 }

@@ -1,6 +1,8 @@
 import { useEffect, useState, useLayoutEffect } from "react";
-import Card from "../components/small/Card";
+import Card from "../components/Card";
+import PlayerHands from "../components/PlayerHands";
 import "../css/atomic.css";
+import "../index.css";
 
 export default function Game() {
   // 📝 Initialize state so VSCode doesn't cry
@@ -14,6 +16,8 @@ export default function Game() {
     },
   ]);
 
+  const [numCardsInPlay, setNumCardsInPlay] = useState(0);
+
   useEffect(() => {
     async function fetchData(url) {
       const response = await fetch(url);
@@ -25,19 +29,18 @@ export default function Game() {
 
   console.log(shuffledDeck);
 
-  const baseUrl = "Images/";
-
   if (shuffledDeck.length != 1) {
     return (
       <div>
         <div>Number of cards: {shuffledDeck.length}</div>
-        <div className={"flex"}>
+        <PlayerHands deck={shuffledDeck} />
+        {/* <div className={"flex"}>
           <Card deck={shuffledDeck} index={123} />
           <Card deck={shuffledDeck} index={99} />
           <Card deck={shuffledDeck} index={156} />
           <Card deck={shuffledDeck} index={43} />
           <Card deck={shuffledDeck} index={9} />
-        </div>
+        </div> */}
       </div>
     );
   } else {

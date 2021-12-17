@@ -43,8 +43,16 @@ state: "NormalBetting"
   Transitions: [DealersTurn]
 
 state: "DealersTurn"
-  RunList: [DealerHitOrStand]
+  RunList: [DealerHitOrStand, AnyHandsStanding?]
   Options: []
-  Transitions: []
+  Transitions: [GameOver, Dealing-2nd]
 
-  
+state: "Dealing-2nd"
+  RunList: []
+  Options: []
+  Transitions: [SubsequentBetting]
+
+state: "SubsequentBetting"
+  RunList: [CheckIfDoubleDownAvailable]
+  Options: [DoubleDown, Hit, Stand]
+  Transitions: [DealersTurn]

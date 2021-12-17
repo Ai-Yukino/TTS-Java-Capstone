@@ -1,6 +1,8 @@
 import { useEffect, useState, useLayoutEffect } from "react";
-import Card from "../components/Card";
-import PlayerHands from "../components/PlayerHands";
+
+import DealerDisplay from "../components/DealerDisplay";
+import PlayerDisplay from "../components/PlayerDisplay";
+
 import "../css/atomic.css";
 import "../index.css";
 
@@ -33,7 +35,8 @@ export default function Game() {
     return (
       <div>
         <div>Number of cards: {shuffledDeck.length}</div>
-        <PlayerHands deck={shuffledDeck} />
+        <DealerDisplay />
+        <PlayerDisplay />
         {/* <div className={"flex"}>
           <Card deck={shuffledDeck} index={123} />
           <Card deck={shuffledDeck} index={99} />
@@ -65,3 +68,6 @@ export default function Game() {
     );
   }
 }
+
+// 📝 playerActions
+// stand, hit, doubleDown, split, surrender

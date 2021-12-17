@@ -1,6 +1,6 @@
 # noteStateFlow
 
-##
+## Notation
 
 `Service 1` --{`state 1`}-->  
 `Service 2` --{...}-->  

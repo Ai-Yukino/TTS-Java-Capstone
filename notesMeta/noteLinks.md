@@ -11,3 +11,7 @@ React Router docs:
 
 Shuffle json elements:  
 [🔗 JSON Shuffle](https://json-shuffle.online/)
+
+Rotate SVGS:  
+MDN  
+[👥 transform](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform)

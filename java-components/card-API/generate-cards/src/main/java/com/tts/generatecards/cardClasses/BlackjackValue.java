@@ -34,6 +34,7 @@ public enum BlackjackValue {
     // Single-value constructor
     private BlackjackValue(int value) {
         this.value = value;
+        this.secondValue = value;
     }
 
     // Multi-value constructor

@@ -1,7 +1,13 @@
-.container {
+.display-center {
     display: flex;
     background-color: DodgerBlue;
-    margin: 10px;
-    padding: 20px;
+
+    margin-top: 50vh;
+    margin-right: 25vw;
+    margin-left: 25vw;
+    margin-bottom: 50vh;
+
+    padding: 
     font-size: 70px;
+    border: 1px solid red;
 }

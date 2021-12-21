@@ -19,4 +19,14 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+    // {id: -1,
+    // greeting: "Hello, World"}
+
+    // {id: -1,
+    // Suit: Hearts,
+    // Rank: Jack,
+    // BlackjackValue: [10, 10],
+    // RenderImage}
+
 }

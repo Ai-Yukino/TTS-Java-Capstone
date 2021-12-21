@@ -17,4 +17,15 @@ public class Card {
         this.data = data;
     }
 
+    public Suit getSuit() {
+        return suit;
+    }
+
+    public BlackjackValue getValue() {
+        return value;
+    }
+
+    public ImageData getData() {
+        return data;
+    }
 }

@@ -18,7 +18,7 @@ export default function Get() {
 
     const baseURL = "http://localhost:8080";
     // const noQuery = "/greeting";
-    const query = "/greeting?name=" + "Remilia Scarlet";
+    const query = "/greeting?name=" + "Daniel";
     myGet(baseURL, query);
   });
   return <div>Get the JSON?</div>;

@@ -1,13 +1,10 @@
 .display-center {
     display: flex;
-    background-color: DodgerBlue;
+    margin: auto;
+    width: 50%;
+    padding: 12vw;
+}
 
-    margin-top: 50vh;
-    margin-right: 25vw;
-    margin-left: 25vw;
-    margin-bottom: 50vh;
-
-    padding: 
-    font-size: 70px;
-    border: 1px solid red;
+.colorBG-charcoal {
+    background-color: #333;
 }

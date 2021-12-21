@@ -1,10 +1,10 @@
-package com.tts.BetsAPI;
+package com.tts.CardAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BetsApiApplicationTests {
+class CardApiApplicationTests {
 
 	@Test
 	void contextLoads() {

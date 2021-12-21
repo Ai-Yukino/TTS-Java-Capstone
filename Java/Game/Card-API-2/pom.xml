@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tts</groupId>
-	<artifactId>Bets-API</artifactId>
+	<artifactId>Card-API</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Bets-API</name>
-	<description>API for calculating bets and payout</description>
+	<name>Card-API</name>
+	<description>Sends out playing cards</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

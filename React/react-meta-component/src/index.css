@@ -14,7 +14,9 @@ code {
 
 /* Clear formatting */
 body {
-  background-color: #11682e;
+  /* background-color: #11682e; */
+  /* https://en.wikipedia.org/wiki/Traditional_colors_of_Japan */
+  background-color: #224634;
   padding: 0;
   margin: 0;
 }

@@ -18,8 +18,6 @@ export default function Game() {
     },
   ]);
 
-  const [numCardsInPlay, setNumCardsInPlay] = useState(0);
-
   useEffect(() => {
     async function fetchData(url) {
       const response = await fetch(url);
@@ -34,70 +32,25 @@ export default function Game() {
 
   if (shuffledDeck.length != 1) {
     return (
-      <div className={"flex" + " " + "column"}>
-        <h2>Cards remaining: {shuffledDeck.length}</h2>
-        <div>
-          <DealerDisplay />
-          <PlayerDisplay />
-          {/* Results stuff */}
-          <div className="bgColor set-box"></div>
+      <div>
+        <div className={"min-height-100vh" + " " + "bgColor"}>
+          <div
+            className={
+              "min-height-75vh" + " " + "bgColor-burlywood" + " " + "flex"
+            }
+          >
+            <div className={"bgColor-red"}>yo</div>
+            <div className={"bgColor-blue"}>hi</div>
+          </div>
+          <div className={"bgColor-antiquewhite"}></div>
         </div>
+        {/* <h2>Cards remaining: {shuffledDeck.length}</h2> */}
       </div>
     );
   } else {
-    return (
-      <div
-        className={
-          "bgColor-red" +
-          " " +
-          "height-100vh" +
-          " " +
-          "width-100vw" +
-          " " +
-          "flex" +
-          " " +
-          "font-size" +
-          " " +
-          "center"
-        }
-      >
-        👀
-      </div>
-    );
+    return <></>;
   }
 }
 
 // 📝 playerActions
 // stand, hit, doubleDown, split, surrender
-
-// 📝 cards for quick testing
-// <Card
-//   src={"Images/" + shuffledDeck[99].Image.src}
-//   alt={shuffledDeck[99].Image.alt}
-//   width={"10%"}
-//   height={"10%"}
-// />
-// <Card
-//   src={"Images/" + shuffledDeck[50].Image.src}
-//   alt={shuffledDeck[50].Image.alt}
-//   width={"10%"}
-//   height={"10%"}
-// />
-// <Card
-//   src={"Images/" + shuffledDeck[23].Image.src}
-//   alt={shuffledDeck[23].Image.alt}
-//   width={"10%"}
-//   height={"10%"}
-// />
-// <Card
-//   src={"Images/" + shuffledDeck[2].Image.src}
-//   alt={shuffledDeck[2].Image.alt}
-//   width={"10%"}
-//   height={"10%"}
-// />
-// <Card
-//   src={"Images/" + shuffledDeck[109].Image.src}
-//   alt={shuffledDeck[109].Image.alt}
-//   width={"10%"}
-//   height={"10%"}
-// />

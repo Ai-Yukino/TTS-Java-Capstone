@@ -1,31 +1,25 @@
 package com.tts.CardAPI;
 
-import com.tts.CardAPI.cardClasses.BlackjackValue;
-import com.tts.CardAPI.cardClasses.ImageData;
-import com.tts.CardAPI.cardClasses.Suit;
+import com.tts.CardAPI.cardClasses.Image;
+import com.tts.CardAPI.cardClasses.Ranks;
+import com.tts.CardAPI.cardClasses.Suits;
 
-public class Card {
-    private final int id;
-    private final Suit suit;
-    private final BlackjackValue value;
-    private final ImageData data;
+public record Card(int cardID, Suits suit, Ranks rank, Image data) {
 
-    public Card(int id, Suit suit, BlackjackValue value, ImageData data) {
-        this.id = id;
-        this.suit = suit;
-        this.value = value;
-        this.data = data;
+    public int getCardID() {
+        return cardID;
     }
 
-    public Suit getSuit() {
+    public Suits getSuit() {
         return suit;
     }
 
-    public BlackjackValue getValue() {
-        return value;
+    public Ranks getRank() {
+        return rank;
     }
 
-    public ImageData getData() {
+    public Image getData() {
         return data;
     }
+
 }

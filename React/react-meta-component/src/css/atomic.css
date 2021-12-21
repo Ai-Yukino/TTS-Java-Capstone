@@ -30,6 +30,17 @@
   background-color: burlywood;
 }
 
+.bgColor {
+  background-color: darkblue;
+}
+
+.set-box {
+  height: 200px;
+  min-height: 200px;
+  width: 200px;
+  min-width: 200px;
+}
+
 .height-100vh {
   height: 100vh;
 }

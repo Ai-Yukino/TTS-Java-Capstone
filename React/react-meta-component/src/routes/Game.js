@@ -39,6 +39,8 @@ export default function Game() {
         <div>
           <DealerDisplay />
           <PlayerDisplay />
+          {/* Results stuff */}
+          <div className="bgColor set-box"></div>
         </div>
       </div>
     );

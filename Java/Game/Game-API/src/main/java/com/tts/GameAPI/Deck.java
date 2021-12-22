@@ -32,6 +32,11 @@ public class Deck {
         }
     }
 
+    // public Deck(ArrayList<String> fixedCards, int n) {
+    //     this.n = n;
+    //     ArrayList<Integer> slots;
+    // }
+
     public void printDeck() {
         System.out.print("\n---\n\n");
         for (Card card : cards) {
@@ -42,6 +47,4 @@ public class Deck {
         }
         System.out.print("---");
     }
-
-
 }

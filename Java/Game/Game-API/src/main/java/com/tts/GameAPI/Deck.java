@@ -22,11 +22,30 @@ public class Deck {
         Suits suits[] = Suits.values();
         Ranks ranks[] = Ranks.values();
 
+        // 📝 Generate `cardPool`
         for (Suits suit : suits) {
             for (Ranks rank : ranks) {
                 numCards++;
-                // cardPool.add()
+                cardPool.add(new Card(numCards, suit, rank,
+                        new Image(rank.getRankID() + suit.getSuitID() + ".svg",
+                                rank.getAltText() + " of " + suit.getAltText())));
             }
         }
+
+        // 📝 Generate `cards`
+        cards = cardPool;
     }
+
+    public void printDeck() {
+        System.out.print("\n---\n\n");
+        for (Card card : cards) {
+            System.out.printf("id: %d\n", card.id());
+            System.out.printf("suit: %s\n", card.suit().getAltText());
+            System.out.printf("rank: %s\n", card.rank().getAltText());
+            System.out.printf("image: {src: %s, alt: %s}\n\n", card.image().src(), card.image().alt());
+        }
+        System.out.print("---");
+    }
+
+    ;
 }

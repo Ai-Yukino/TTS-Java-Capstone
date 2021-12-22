@@ -26,13 +26,9 @@ export default function Post() {
       localStorage.setItem('token', token);
       var x = localStorage.getItem('token');
       console.log("Token: " + x);
-
-      for(const header of response.headers){
-        console.log(header);
-     }
      
       
-        
+  
     }
     
     

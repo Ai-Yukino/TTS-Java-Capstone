@@ -1,0 +1,10 @@
+.display-center {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 12vw;
+}
+
+.colorBG-charcoal {
+    background-color: #333;
+}

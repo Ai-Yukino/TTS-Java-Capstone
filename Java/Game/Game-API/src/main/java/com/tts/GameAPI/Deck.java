@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class Deck {
 
     int n;
-    private ArrayList<Card> cardPool = new ArrayList<>();
     private ArrayList<Card> cards = new ArrayList<>();
 
     // 📝 Constructs deck of 52 cards "in order"
@@ -22,18 +21,15 @@ public class Deck {
         Suits suits[] = Suits.values();
         Ranks ranks[] = Ranks.values();
 
-        // 📝 Generate `cardPool`
+        // 📝 Generate `cards`
         for (Suits suit : suits) {
             for (Ranks rank : ranks) {
                 numCards++;
-                cardPool.add(new Card(numCards, suit, rank,
+                cards.add(new Card(numCards, suit, rank,
                         new Image(rank.getRankID() + suit.getSuitID() + ".svg",
                                 rank.getAltText() + " of " + suit.getAltText())));
             }
         }
-
-        // 📝 Generate `cards`
-        cards = cardPool;
     }
 
     public void printDeck() {
@@ -47,5 +43,5 @@ public class Deck {
         System.out.print("---");
     }
 
-    ;
+
 }

@@ -15,6 +15,14 @@ public enum Suits {
         this.altText = altText;
     }
 
+    public String getSuitID() {
+        return suitID;
+    }
+
+    public String getAltText() {
+        return altText;
+    }
+    
     // public static void test() {
     //     Suits[] suits = Suits.values();
     //     for (Suits s : suits) {

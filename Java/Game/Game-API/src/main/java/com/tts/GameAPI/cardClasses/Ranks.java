@@ -1,36 +1,37 @@
 package com.tts.GameAPI.cardClasses;
 
 public enum Ranks {
-    ONE(1, "1"),
-    TWO(2, "2"),
-    THREE(3, "3"),
-    FOUR(4, "4"),
-    FIVE(5, "5"),
-    SIX(6, "6"),
-    SEVEN(7, "7"),
-    EIGHT(8, "8"),
-    NINE(9, "9"),
-    TEN(10, "10"),
-    JACK(10, "J"),
-    QUEEN(10, "Q"),
-    KING(10, "K"),
-    ACE(1, 10, "A");
+    TWO(2, "2", "Two"),
+    THREE(3, "3", "Three"),
+    FOUR(4, "4", "Four"),
+    FIVE(5, "5", "Five"),
+    SIX(6, "6", "Six"),
+    SEVEN(7, "7", "Seven"),
+    EIGHT(8, "8", "Eight"),
+    NINE(9, "9", "Nine"),
+    TEN(10, "10", "Ten"),
+    JACK(10, "J", "Jack"),
+    QUEEN(10, "Q", "Queen"),
+    KING(10, "K", "King"),
+    ACE(1, 10, "A", "Ace");
 
     int firstValue;
     int secondValue;
-
     String rankID;
+    String altText;
 
-    Ranks(int value, String rankID) {
+    Ranks(int value, String rankID, String altText) {
         this.firstValue = value;
         this.secondValue = value;
         this.rankID = rankID;
+        this.altText = altText;
     }
 
-    Ranks(int firstValue, int secondValue, String rankID) {
+    Ranks(int firstValue, int secondValue, String rankID, String altText) {
         this.firstValue = firstValue;
         this.secondValue = secondValue;
         this.rankID = rankID;
+        this.altText = altText;
     }
 
     public int getFirstValue() {
@@ -43,6 +44,10 @@ public enum Ranks {
 
     public String getRankID() {
         return rankID;
+    }
+
+    public String getAltText() {
+        return altText;
     }
 
     // public static void test() {

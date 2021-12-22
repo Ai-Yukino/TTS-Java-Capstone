@@ -2,10 +2,10 @@ package com.tts.GameAPI.cardClasses;
 
 public enum Suits {
 
-    CLUBS("C", "Clubs"),
-    DIAMONDS("D", "Diamonds"),
-    HEARTS("H", "Hearts"),
-    SPADES("S", "Spades");
+    CLUBS("C", "clubs"),
+    DIAMONDS("D", "diamonds"),
+    HEARTS("H", "hearts"),
+    SPADES("S", "spades");
 
     String suitID;
     String altText;
@@ -22,7 +22,7 @@ public enum Suits {
     public String getAltText() {
         return altText;
     }
-    
+
     // public static void test() {
     //     Suits[] suits = Suits.values();
     //     for (Suits s : suits) {

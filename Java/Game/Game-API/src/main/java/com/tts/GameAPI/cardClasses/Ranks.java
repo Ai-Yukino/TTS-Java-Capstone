@@ -33,6 +33,18 @@ public enum Ranks {
         this.rankID = rankID;
     }
 
+    public int getFirstValue() {
+        return firstValue;
+    }
+
+    public int getSecondValue() {
+        return secondValue;
+    }
+
+    public String getRankID() {
+        return rankID;
+    }
+
     // public static void test() {
     //     Ranks[] ranks = Ranks.values();
     //     for (Ranks rank : ranks) {

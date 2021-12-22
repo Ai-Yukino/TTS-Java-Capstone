@@ -30,7 +30,20 @@
   background-color: burlywood;
 }
 
-.height-100vh {
+.bgColor-blue {
+  background-color: blue;
+}
+
+.bgColor {
+  background-color: #fcc9b9;
+  /* background-color: none; */
+}
+
+.min-height-75vh {
+  min-height: 75vh;
+}
+
+.min-height-100vh {
   height: 100vh;
 }
 
@@ -50,6 +63,10 @@
 
 .min-width-100vw {
   min-width: 100vw;
+}
+
+.min-width {
+  min-width: 25vw;
 }
 
 .set-width-60vw {

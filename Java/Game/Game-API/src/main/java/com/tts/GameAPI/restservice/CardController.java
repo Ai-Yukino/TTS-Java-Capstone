@@ -3,6 +3,7 @@ package com.tts.GameAPI.restservice;
 import com.tts.GameAPI.Card;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -13,6 +14,9 @@ public class CardController {
 
     // 📝 Counter for id
     private final AtomicLong counter = new AtomicLong();
+
+    // @PostMapping("/Game")
+    // public
 
     // 📝 TODO: method to generate specific card
     // e.g. Ace of Spades:

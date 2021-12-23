@@ -8,64 +8,56 @@ package com.tts.GameAPI;
 import com.tts.GameAPI.cardClasses.Image;
 import com.tts.GameAPI.cardClasses.Ranks;
 import com.tts.GameAPI.cardClasses.Suits;
+
 import java.io.Serializable;
 import java.util.Random;
 
 import java.util.ArrayList;
 
-public class Deck extends Exception implements Serializable
-{
+public class Deck extends Exception implements Serializable {
 
     private int nextCardIndex;
 
 
     Card[] deck = new Card[52];
 
-    public Deck(){
+    public Deck() {
 
         int count = 0;
 //        For the sake of not having cards with value over 11, I did this. Maybe conflicting but yeah~
         for (int i = 1; i <= 13; i++) {
-            if(i==1) {
-                deck[count++] = new Card('H', 11);
-            }
-            else if(i<11) {
-                deck[count++] = new Card('H', i);
-            }
-            else {
+            if (i == 1) {
+                deck[count++] = new Card(count, 'H', 11, new Image("AH", "Ace of hearts"));
+            } else if (i < 11) {
+                deck[count++] = new Card(count, 'H', i, new Image(Integer.toString(i) + ""));
+            } else {
                 deck[count++] = new Card('H', 10);
             }
         }
         for (int i = 1; i <= 13; i++) {
-            if(i==1) {
+            if (i == 1) {
                 deck[count++] = new Card('S', 11);
-            }
-            else if(i<11) {
+            } else if (i < 11) {
                 deck[count++] = new Card('S', i);
-            }
-            else {
+            } else {
                 deck[count++] = new Card('S', 10);
             }
         }
         for (int i = 1; i <= 13; i++) {
-            if(i==1) {
+            if (i == 1) {
                 deck[count++] = new Card('C', 11);
-            }
-            else if(i<11) {
+            } else if (i < 11) {
                 deck[count++] = new Card('C', i);
-            }
-            else {
+            } else {
                 deck[count++] = new Card('C', 10);
             }
         }
         for (int i = 1; i <= 13; i++) {
-            if(i==1) {
+            if (i == 1) {
                 deck[count++] = new Card('D', 11);
-            }
-            else if(i<11) {
+            } else if (i < 11) {
                 deck[count++] = new Card('D', i);
-            }
-            else {
+            } else {
                 deck[count++] = new Card('D', 10);
             }
         }
@@ -74,12 +66,12 @@ public class Deck extends Exception implements Serializable
     }
 
 
-    public String toString(){
+    public String toString() {
 
         String str = "";
 
         for (int i = 0; i < deck.length; i++) {
-            str +=	deck[i].toString() + " ";
+            str += deck[i].toString() + " ";
         }
         return str;
     }
@@ -95,7 +87,7 @@ public class Deck extends Exception implements Serializable
 
     public void shuffle() {
         Random rn = new Random();
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             for (int j = 0; j < deck.length; j++) {
                 swapCards(i, rn.nextInt(52));
             }
@@ -103,15 +95,14 @@ public class Deck extends Exception implements Serializable
         nextCardIndex = 0;
     }
 
-    public Card getCard(int index){
+    public Card getCard(int index) {
         return deck[index];
     }
 
 
-
-    public boolean compareTo(Deck otherDeck){
-        for (int i=0; i < deck.length; i++){
-            if (! deck[i].compareTo(otherDeck.getCard(i)) ) {
+    public boolean compareTo(Deck otherDeck) {
+        for (int i = 0; i < deck.length; i++) {
+            if (!deck[i].compareTo(otherDeck.getCard(i))) {
                 return false;
             }
         }
@@ -128,13 +119,6 @@ public class Deck extends Exception implements Serializable
 
 
 }
-
-
-
-
-
-
-
 
 
 //public class Deck {

@@ -1,4 +1,92 @@
+/* 🍂Flex🍃 */
 .flex {
+  display: flex;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+/* 🌈Color🌈 */
+.bgColor-lapis-lazuli {
+  background-color: #1f4788;
+}
+
+.bgColor-cypress-bark {
+  background-color: #752e23;
+}
+
+.bgColor-young-bamboo {
+  background-color: #6b9362;
+}
+
+.bgColor-coarse-wool {
+  background-color: #181b26;
+}
+
+.bgColor-cherry-blossom {
+  background-color: #fcc9b9;
+}
+
+.bgColor-wisteria {
+  background-color: #89729e;
+}
+
+/* 📦Height📦 */
+
+/* 📦vh */
+.fixed-height-100vh {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.fixed-height-70vh {
+  min-height: 70vh;
+  max-height: 70vh;
+}
+
+.fixed-height-25vh {
+  min-height: 25vh;
+  max-height: 25vh;
+}
+
+/* 📦Percents */
+.fixed-height-91-percent {
+  min-height: 91%;
+}
+
+.fixed-height-7_5-percent {
+  min-height: 7.5%;
+  max-height: 7.5%;
+}
+
+/* 📦Width📦 */
+.fixed-width-15-percent {
+  min-width: 15%;
+  max-width: 15%;
+}
+
+.fixed-width-75-percent {
+  min-width: 75%;
+  max-width: 75%;
+}
+
+/* ✋Margins🤚 */
+.margin-2-percent {
+  margin: 2%;
+}
+
+/* .margin-vertical-1_25-percent {
+  margin-top: 1.25%;
+  margin-bottom: 1.25%;
+} */
+
+/* 🍂Old🍃 */
+/* .flex {
   display: flex;
 }
 
@@ -36,7 +124,6 @@
 
 .bgColor {
   background-color: #fcc9b9;
-  /* background-color: none; */
 }
 
 .min-height-75vh {
@@ -130,4 +217,4 @@
 
 .color-black {
   color: black;
-}
+} */

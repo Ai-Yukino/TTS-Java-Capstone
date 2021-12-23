@@ -3,28 +3,30 @@ package com.tts.GameAPI;
 import com.tts.GameAPI.cardClasses.Image;
 import com.tts.GameAPI.cardClasses.Ranks;
 import com.tts.GameAPI.cardClasses.Suits;
+
 import java.io.Serializable;
 
-public class Card implements Serializable
-{
+public class Card implements Serializable {
 
     /*Making data "private" is information hiding, so that it cannot be access by
      *someone else with code outside this class.*/
+    private int id;
     private char suit;
     private int value;
+    private Image image;
 
     private Card() {
-
+        id = -1;
         suit = ' ';
         value = 0;
-
-
+        image = new Image("", "");
     }
 
-    public Card(char newSuit, int newValue) {
+    public Card(int newId, char newSuit, int newValue, Image newImage) {
+        id = newId;
         this.value = newValue;
         this.suit = newSuit;
-
+        image = newImage;
     }
 
 
@@ -42,18 +44,15 @@ public class Card implements Serializable
 
             suit = "Hearts";
 
-        }
-        else if (this.suit == 'S') {
+        } else if (this.suit == 'S') {
 
             suit = "Spades";
 
-        }
-        else if (this.suit == 'C') {
+        } else if (this.suit == 'C') {
 
             suit = "Clubs";
 
-        }
-        else if (this.suit == 'D') {
+        } else if (this.suit == 'D') {
 
             suit = "Diamonds";
 
@@ -65,56 +64,46 @@ public class Card implements Serializable
         return suit;
 
     }
+
     public char getSuitDesignator() {
 
         return suit;
 
     }
-    public String getValueName(){
+
+    public String getValueName() {
 
         String name = "Unknown";
 
         if (this.value == 1) {
             name = "Ace";
-        }
-        else if (this.value == 2) {
+        } else if (this.value == 2) {
             name = "Two";
-        }
-        else if (this.value == 3) {
+        } else if (this.value == 3) {
             name = "Three";
-        }
-        else if (this.value == 4) {
+        } else if (this.value == 4) {
             name = "Four";
-        }
-        else if (this.value == 5) {
+        } else if (this.value == 5) {
             name = "Five";
-        }
-        else if (this.value == 6) {
+        } else if (this.value == 6) {
             name = "Six";
-        }
-        else if (this.value == 7) {
+        } else if (this.value == 7) {
             name = "Seven";
-        }
-        else if (this.value == 8) {
+        } else if (this.value == 8) {
             name = "Eight";
-        }
-        else if (this.value == 9) {
+        } else if (this.value == 9) {
 
             name = "Nine";
-        }
-        else if (this.value == 10) {
+        } else if (this.value == 10) {
 
             name = "Ten";
-        }
-        else if (this.value == 11) {
+        } else if (this.value == 11) {
 
             name = "Jack";
-        }
-        else if (this.value == 12) {
+        } else if (this.value == 12) {
 
             name = "Queen";
-        }
-        else if (this.value == 13) {
+        } else if (this.value == 13) {
 
             name = "King";
 
@@ -135,18 +124,18 @@ public class Card implements Serializable
         this.value = value;
     }
 
-    public boolean compareSuit(Card card){
+    public boolean compareSuit(Card card) {
 
         return this.suit == card.getSuitDesignator();
 
     }
 
-    public boolean compareValue(Card card){
+    public boolean compareValue(Card card) {
 
         return this.value == card.getValue();
     }
 
-    public boolean compareTo(Card card){
+    public boolean compareTo(Card card) {
 
         return this.suit == card.getSuitDesignator() && this.value == card.getValue();
     }

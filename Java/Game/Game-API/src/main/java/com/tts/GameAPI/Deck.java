@@ -13,6 +13,7 @@ import java.util.Random;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 
 public class Deck extends Exception implements Serializable
 {
@@ -89,11 +90,51 @@ public class Deck extends Exception implements Serializable
 
         if (nextCardIndex < 0 || nextCardIndex > 51) {
             System.out.println("Future exception goes here");
+=======
+public class Deck {
+
+    int n;
+    private ArrayList<Card> cards = new ArrayList<>();
+
+    // 📝 Constructs deck of 52 cards "in order"
+    public Deck() {
+        n = 1;
+        int numCards = 0;
+        Suits suits[] = Suits.values();
+        Ranks ranks[] = Ranks.values();
+
+        // 📝 Generate `cards`
+        for (Suits suit : suits) {
+            for (Ranks rank : ranks) {
+                numCards++;
+                cards.add(new Card(numCards, suit, rank,
+                        new Image(rank.getRankID() + suit.getSuitID() + ".svg",
+                                rank.getAltText() + " of " + suit.getAltText())));
+            }
+        }
+    }
+
+    // public Deck(ArrayList<String> fixedCards, int n) {
+    //     this.n = n;
+    //     ArrayList<Integer> slots;
+    // }
+
+    public void printDeck() {
+        System.out.print("\n---\n\n");
+        for (Card card : cards) {
+            System.out.printf("id: %d\n", card.id());
+            System.out.printf("suit: %s\n", card.suit().getAltText());
+            System.out.printf("rank: %s\n", card.rank().getAltText());
+            System.out.printf("image: {src: %s, alt: %s}\n\n", card.image().src(), card.image().alt());
+>>>>>>> 5ee2313d69da8c9126fbf6757fd435ce35239347
         }
         return deck[nextCardIndex++];
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5ee2313d69da8c9126fbf6757fd435ce35239347
 }
 
 

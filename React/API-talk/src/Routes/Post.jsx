@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+
 export default function Post() {
   useEffect(() => {
     async function myPost() {
@@ -8,6 +9,7 @@ export default function Post() {
         method: "POST",
         mode: "cors",
         headers: {
+          'Accept': 'application/json',
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -16,10 +18,20 @@ export default function Post() {
         }),
       };
 
-      const response = await fetch(url, request);
-      // const json = await response.json();
-      console.log(response);
+      
+      let response = await fetch(url, request);
+
+      var token = response.headers.get('authorization');
+      console.log(token);
+      localStorage.setItem('token', token);
+      var x = localStorage.getItem('token');
+      console.log("Token: " + x);
+     
+      
+  
     }
+    
+    
     myPost();
   });
   return <div>Get the JWT?</div>;

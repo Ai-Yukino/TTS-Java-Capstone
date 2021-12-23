@@ -32,19 +32,71 @@ export default function Game() {
 
   if (shuffledDeck.length != 1) {
     return (
-      <div>
-        <div className={"min-height-100vh" + " " + "bgColor"}>
+      <div
+        className={
+          "flex" +
+          " " +
+          "direction-column" +
+          " " +
+          "justify-space-between" +
+          " " +
+          "fixed-height-100vh"
+        }
+      >
+        <div
+          className={
+            "bgColor-cherry-blossom" +
+            " " +
+            "flex" +
+            " " +
+            "justify-space-between" +
+            " " +
+            "fixed-height-70vh"
+          }
+        >
           <div
             className={
-              "min-height-75vh" + " " + "bgColor-burlywood" + " " + "flex"
+              "bgColor-coarse-wool" +
+              " " +
+              "flex" +
+              " " +
+              "direction-column" +
+              " " +
+              "justify-space-between" +
+              " " +
+              "fixed-width-15-percent" +
+              " " +
+              "margin-2-percent"
             }
           >
-            <div className={"bgColor-red"}>yo</div>
-            <div className={"bgColor-blue"}>hi</div>
+            <div
+              className={
+                "bgColor-cypress-bark" + " " + "fixed-height-7_5-percent"
+              }
+            ></div>
+            <div
+              className={
+                "bgColor-lapis-lazuli" + " " + "fixed-height-91-percent"
+              }
+            ></div>
           </div>
-          <div className={"bgColor-antiquewhite"}></div>
+          <div
+            className={
+              "bgColor-young-bamboo" +
+              " " +
+              "fixed-width-75-percent" +
+              " " +
+              "margin-2-percent"
+            }
+          >
+            {/* <div className={"bgColor" + " "}></div> */}
+          </div>
         </div>
-        {/* <h2>Cards remaining: {shuffledDeck.length}</h2> */}
+        <div
+          className={
+            "bgColor-wisteria" + " " + "flex" + " " + "fixed-height-25vh"
+          }
+        ></div>
       </div>
     );
   } else {
@@ -54,3 +106,7 @@ export default function Game() {
 
 // 📝 playerActions
 // stand, hit, doubleDown, split, surrender
+
+{
+  /* <h2>Cards remaining: {shuffledDeck.length}</h2>; */
+}

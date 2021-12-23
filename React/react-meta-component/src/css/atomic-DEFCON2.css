@@ -1,10 +1,68 @@
-.display-center {
-    display: flex;
-    margin: auto;
-    width: 50%;
-    padding: 12vw;
-}
+/* Stylesheet-wide base elements settings (i.e generic styling under DEFCON2) */
 
-.colorBG-charcoal {
-    background-color: #333;
-}
+    /* Removes styling for all anchor elements*/
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+/* Stylesheet classes */
+
+    .position-center-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .position-top-flex {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .positionText-center-flex {
+        text-align: center;
+        display: table;
+    }
+
+    .position-overlay {
+        position: absolute;
+    }
+
+    .position-column-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .colorBG-charcoal {
+        background-color: #222222;
+    }
+    .colorBG-darkBrown {
+        background-color: #1f1815;
+    }
+    .colorBorder-darkGreen {
+        border-color: #145739;
+        border-style: solid
+    }
+
+    .colorBorderBottom-darkGreen {
+        border-bottom: 4px solid #145739;
+    }
+
+    .dimension-div-menu {
+        width: 45rem;
+        height: 25rem;
+    }
+
+    .dimension-div-menuBar {
+        width: 45rem;
+        height: 4rem;
+    }
+
+    .style-remove {
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }

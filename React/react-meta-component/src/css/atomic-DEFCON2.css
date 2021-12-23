@@ -1,10 +1,43 @@
-.display-center {
+.position-center-flex {
     display: flex;
-    margin: auto;
-    width: 50%;
-    padding: 12vw;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.position-top-flex {
+    display: flex;
+    align-self: flex-start;
+}
+
+.positionTest-center-flex {
+    align-self: center;
+    height: auto;
+    text-align: center;
+    justify-content: center;
 }
 
 .colorBG-charcoal {
     background-color: #333;
+}
+.colorBG-darkBrown {
+    background-color: #261D17;
+}
+
+.colorBorder-darkGreen {
+    border-color: #145739;
+    border-style: solid
+}
+
+.colorBorderBottom-darkGreen {
+    border-bottom: 4px solid #145739;
+}
+
+.dimension-div-menu {
+    width: 45rem;
+    height: 25rem;
+}
+
+.dimension-div-menuBar {
+    width: 45rem;
+    height: 4rem;
 }

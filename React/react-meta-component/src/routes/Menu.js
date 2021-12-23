@@ -21,12 +21,23 @@ export default function Menu() {
         " " +
         "position-top-flex" +
         " " +
-        "positionTest-center-flex"}>
+        "positionText-center-flex"}>
           <h1 className="positionTest-center-flex">
-            Foo
+          ♦️♣️ BlackJack-TTS ♠️♥️
           </h1>
         </div>
-        <Link to={<Game />}>Log In</Link>
+        <div className={
+          "position-overlay" +
+          " " +
+          "style-remove-hyperlinks" +
+          " " +
+          "position-column-flex"
+          }>
+          <Link to="/game">♥️ Log In</Link>
+          <Link to="/game">♠️ Create Account</Link>
+          <Link to="/how-to">♦️ How To Play</Link>
+          <Link to="">♣️ Results</Link>
+        </div>
       </div>
     </div>
   );

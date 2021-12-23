@@ -1,43 +1,68 @@
-.position-center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.position-top-flex {
-    display: flex;
-    align-self: flex-start;
-}
+/* Stylesheet-wide base elements settings (i.e generic styling under DEFCON2) */
 
-.positionTest-center-flex {
-    align-self: center;
-    height: auto;
-    text-align: center;
-    justify-content: center;
-}
+    /* Removes styling for all anchor elements*/
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-.colorBG-charcoal {
-    background-color: #333;
-}
-.colorBG-darkBrown {
-    background-color: #261D17;
-}
+/* Stylesheet classes */
 
-.colorBorder-darkGreen {
-    border-color: #145739;
-    border-style: solid
-}
+    .position-center-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .position-top-flex {
+        display: flex;
+        align-self: flex-start;
+    }
 
-.colorBorderBottom-darkGreen {
-    border-bottom: 4px solid #145739;
-}
+    .positionText-center-flex {
+        text-align: center;
+        display: table;
+    }
 
-.dimension-div-menu {
-    width: 45rem;
-    height: 25rem;
-}
+    .position-overlay {
+        position: absolute;
+    }
 
-.dimension-div-menuBar {
-    width: 45rem;
-    height: 4rem;
-}
+    .position-column-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .colorBG-charcoal {
+        background-color: #222222;
+    }
+    .colorBG-darkBrown {
+        background-color: #1f1815;
+    }
+    .colorBorder-darkGreen {
+        border-color: #145739;
+        border-style: solid
+    }
+
+    .colorBorderBottom-darkGreen {
+        border-bottom: 4px solid #145739;
+    }
+
+    .dimension-div-menu {
+        width: 45rem;
+        height: 25rem;
+    }
+
+    .dimension-div-menuBar {
+        width: 45rem;
+        height: 4rem;
+    }
+
+    .style-remove {
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }

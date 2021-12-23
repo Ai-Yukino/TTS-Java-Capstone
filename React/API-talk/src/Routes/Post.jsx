@@ -22,10 +22,13 @@ export default function Post() {
       let response = await fetch(url, request);
 
       var token = response.headers.get('authorization');
-      console.log(token);
-      localStorage.setItem('token', token);
-      var x = localStorage.getItem('token');
-      console.log("Token: " + x);
+      let date = new Date();
+      date.setTime(date.getTime()+(1*60*60*1000));
+      document.cookie = "access_token " + " = " + token + "; expires = " + date.toGMTString();
+
+      //view cookie
+      // let cookie = document.cookie.split(';');
+      // console.log('cookie : ', cookie);
      
       
   
